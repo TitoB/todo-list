@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import Layout from './components/layout.js';
-import Task from './components/task.js';
+//import Task from './components/task.js';
 import TaskList from './components/task-list.js';
 import Title from './components/title.js';
 import Input from './components/input';
@@ -36,7 +36,7 @@ class App extends Component {
     let newTasks = this.state.tasks;
     newTasks.splice(id, 1)
     this.setState({
-      tasks: newTasks,
+      tasks: newTasks
     })
   }
        
@@ -46,7 +46,7 @@ class App extends Component {
         <Layout>
            <Title/>
            
-              <input 
+              <Input 
                 handleSubmit={this.handleSubmit}
                 handleTaskChange={this.handleTaskChange} 
                 value={this.state.newTask}
